@@ -8,7 +8,5 @@
             "name": "Julien Buabent",
             "email": "julien.buabent@gmail.com"
         }
-    ],
-    "minimum-stability": "stable",
-    "require": {}
+    ]
 }
