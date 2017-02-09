@@ -1,0 +1,113 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+
+    <script src="../libraries/RGraph.svg.common.core.js" ></script>
+    <script src="../libraries/RGraph.svg.bar.js" ></script>
+    
+
+    <title>RGraph demo: An SVG stacked Bar chart</title>
+
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="An SVG stacked Bar chart" />
+</head>
+<body>
+
+    <!-- Share buttons -->
+    <p style="float: right">
+        <script>
+            document.write('<a href="" target="_blank" onclick="window.open(\'https://www.facebook.com/sharer/sharer.php?u=http://www.rgraph.net' + location.pathname + '\', null, \'top=50,left=50,width=600,height=368\'); return false"><img src="../images/facebook-large.png" width="200" height="43" alt="Share on Facebook" border="0" title="Visit the RGraph Facebook page" id="facebook_link" /></a>&nbsp;');
+            document.write('<a href="https://twitter.com/_rgraph" target="_blank" onclick="window.open(\'https://twitter.com/intent/tweet?text=Check%20out%20this%20demo%20of%20RGraph:%202D/3D%20JavaScript%20charts%20-%20Free%20and%20Open%20Source%20http://www.rgraph.net' + location.pathname + '\', null, \'top=50,left=50,width=700,height=400\'); return false"><img src="../images/twitter-large.png" width="200" height="43" alt="Share on Twitter" border="0" title="Mention RGraph on Twitter" id="twitter_link" /></a>');
+        </script>
+    </p>
+
+
+    <h1>An SVG stacked Bar chart</h1>
+
+    
+    <div style="width: 950px; height: 300px" id="chart-container"></div>
+
+
+
+    <script>
+        new RGraph.SVG.Bar({
+            id: 'chart-container',
+            data: [[19.809672,2.309533,1.576628],[20.831782,1.638780,1.529451],[22.933183,2.340360,3.277996],[19.775762,3.369877,1.927770],[34.897281,3.093969,2.672899],[33.971873,2.319708, 4.064356]],
+            options: {
+                title: 'A magyarorszagi csomagforgalom alakulasa',
+                titleSubtitle: 'Darabszamok a versenypiaci szolgaltatasban. Forras: NMHH',
+                colors: ['#8EC3A7','#DC5356','#F0CB69'],
+                xaxisLabels: ['2010','2011','2012','2013','2014','2015'],
+                grouping: 'stacked',
+                strokestyle: 'white',
+                yaxisMax: 50,
+                yaxisColor: 'transparent',
+                yaxisUnitsPost: 'm',
+                xaxisColor: 'transparent',
+                textSize: 10,
+                textColor: '#999',
+                backgroundGridVlines: false,
+                backgroundGridBorder: false,
+                hmargin: 40,
+                gutterTop: 50,
+                gutterLeft: 50
+            }
+        }).grow();
+    </script>
+
+
+
+    <p></p>
+
+    This goes in the documents header:
+    <pre class="code">
+&lt;script src="RGraph.svg.common.core.js"&gt;&lt;/script&gt;
+&lt;script src="RGraph.svg.bar.js"&gt;&lt;/script&gt;
+</pre>
+    
+    Put this where you want the chart to show up:
+    <pre class="code">
+&lt;div style="width: 950px; height: 300px" id="chart-container"&gt;&lt;/div&gt;
+</pre>
+
+    This is the code that generates the chart:
+    <pre class="code">
+&lt;script&gt;
+    new RGraph.SVG.Bar({
+        id: 'chart-container',
+        data: [[19.809672,2.309533,1.576628],[20.831782,1.638780,1.529451],[22.933183,2.340360,3.277996],[19.775762,3.369877,1.927770],[34.897281,3.093969,2.672899],[33.971873,2.319708, 4.064356]],
+        options: {
+            title: 'A magyarorszagi csomagforgalom alakulasa',
+            titleSubtitle: 'Darabszamok a versenypiaci szolgaltatasban. Forras: NMHH',
+            colors: ['#8EC3A7','#DC5356','#F0CB69'],
+            xaxisLabels: ['2010','2011','2012','2013','2014','2015'],
+            grouping: 'stacked',
+            strokestyle: 'white',
+            yaxisMax: 50,
+            yaxisColor: 'transparent',
+            yaxisUnitsPost: 'm',
+            xaxisColor: 'transparent',
+            textSize: 10,
+            textColor: '#999',
+            backgroundGridVlines: false,
+            backgroundGridBorder: false,
+            hmargin: 40,
+            gutterTop: 50,
+            gutterLeft: 50
+        }
+    }).grow();
+&lt;/script&gt;
+</pre>
+
+
+
+    
+    
+
+    <p>
+        <a href="./#svg">&laquo; Back</a>
+    </p>
+
+</body>
+</html>
